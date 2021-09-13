@@ -1,0 +1,912 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/helvetica-font/Helvetica-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Hormonia";
+  src: url("../fonts/hormonia/HarmoniaSansProCyr-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Hormonia-small";
+  src: url("../fonts/hormonia/HarmoniaSansProCyr-Light.woff2");
+}
+
+@font-face {
+  font-family: "Hormonia-normal";
+  src: url("../fonts/hormonia/HarmoniaSansProCyr-SemiBd.woff2");
+}
+
+@font-face {
+  font-family: "Barlow Condensed", sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap');
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  src: url("../fonts/trebuchet/TrebuchetMS-Bold.woff");
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/tahoma/Tahoma.woff");
+}
+
+:root {
+  /* fonts */
+  --font-helvetica: "Helvetica";
+  --font-hormonia: "Hormonia";
+  --font-hormonia-small: "Hormonia-small";
+  --font-hormonia-normal: "Hormonia-normal";
+  --font-barlow: "Barlow Condensed", sans-serif;
+  --font-trebuchet: "Trebuchet";
+  --font-tahoma: "Tahoma";
+  /* color */
+  --color-white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  /* position: relative; */
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/modules/rbthemeslider/uploads/home4-slide1.jpg");
+}
+
+.header:hover .icon-left,
+.header:hover .icon-right {
+  opacity: 1;
+}
+
+.header-sec {
+  padding: 20px 0;
+  position: relative;
+
+}
+
+.logo {
+  position: relative;
+  width: 95px;
+  height: 30px;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--color-white);
+  margin: 0 25px;
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  font-size: 16px;
+  font-family: var(--font-hormonia);
+}
+
+.line {
+  position: absolute;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #d88f0f;
+  transition: width 0.3s ease;
+}
+
+.line-left {
+  left: 50%;
+}
+
+.line-right {
+  right: 50%;
+}
+
+.nav-item:hover .line-right,
+.nav-item:hover .line-left {
+  width: 50%;
+}
+
+.nav-link-icon::after {
+  content: '';
+  position: relative;
+  background-image: url("../img/down-arrow.png");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.menu-link {
+  position: relative;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.menu-link-shop {
+  position: relative;
+  top: -17px;
+  left: -8px;
+  color: var(--color-white);
+  font-size: 10px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  background-color: #d88f0f;
+
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  top: 35%;
+  /* top: 350px; */
+  
+}
+
+.hero-element {
+  width: 620px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-small-title {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+  animation: hero-anim-small 0.8s ease;
+  justify-content: center;
+  color: var(--color-white);
+  font-family: var(--font-hormonia-small);
+}
+
+@keyframes hero-anim-small {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-big-title {
+  position: relative;
+  top: 0;
+  left: 0%;
+  margin: 0;
+  font-size: 90px;
+  line-height: 120px;
+  font-weight: 600;
+  animation: hero-anim-big .8s ease;
+  color: var(--color-white);
+  font-family: var(--font-helvetica);
+}
+
+@keyframes hero-anim-big {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-link {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  width: 211px;
+  height: 60px;
+  font-family: var(--font-tahoma);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  padding: 10px 30px;
+  animation: hero-link-anim .8s ease;
+}
+
+@keyframes hero-link-anim {
+  0% {
+    left: 25%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-link:hover {
+  background-color: rgba(216, 145, 13);
+  border-color: rgba(216, 145, 13);
+}
+
+.icon-left,
+.icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  opacity: 10;
+  border-radius: 50%;
+  position: absolute ;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.icon-left {
+  left: 40px;
+}
+
+.icon-right {
+  right: 40px;
+}
+
+.icon-left:hover,
+.icon-right:hover {
+  background-color: #000;
+}
+
+.nav-link:hover .icon-left {
+  opacity: 1;
+}
+
+/* MAIN */
+
+.main {
+  width: 1920px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main-big-item {
+  margin: 0;
+  margin-top: -15px;
+  width: 33.333333333%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-des-big {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%)
+}
+
+.main-big-img {
+  transform: scale(100%);
+  transition: transform 0.5s ease;
+}
+
+.main-inner:hover .main-big-img {
+  cursor: pointer;
+  transform: scale(110%);
+
+}
+
+.main-small-title {
+  font-family: var(--font-hormonia-small);
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+}
+
+.main-big-title {
+  font-family: var(--font-barlow);
+  font-size: 60px;
+  font-weight: 500;
+  color: #222;
+  margin: 0;
+}
+
+.main-big-text {
+  font-family: var(--font-barlow);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 25px;
+}
+
+.main-big-text::after {
+  content: '';
+  width: 85px;
+  height: 3px;
+  margin-top: 3px;
+  background-repeat: no-repeat;
+  display: block;
+  border-bottom: 3px solid #d88f0f;
+}
+
+/* MAIN NAV */
+
+.main-center {
+  width: 1750px;
+  padding: 30px 15px;
+  margin: 0 auto;
+
+}
+
+.main-cnt-list {
+  margin: 0 25px; 
+}
+
+.main-cnt-link {
+  font-family: var(--font-hormonia-normal);
+  color: #222;
+  font-size: normal;
+  font-size: 20px;
+}
+
+.main-link-freeze::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  margin-top: 5px;
+  background-repeat: no-repeat;
+  display: block;
+  background-color: #e8bc6f;
+}
+
+.main-link-hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.main-link-hover::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  margin-top: 5px;
+  background-repeat: no-repeat;
+  display: block;
+  background-color: #e8bc6f;
+  transition: width 0.3s ease;
+}
+
+.main-cnt-list:hover .main-link-hover::after,
+.main-cnt-list:hover .main-link-hover {
+  width: 100%;
+  opacity: 1;
+}
+
+/* SHOP */
+
+.shop-list {
+  width: 100%;
+}
+
+.shop-item {
+  width: 319px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.img-inner {
+  z-index: -1;
+}
+
+.shop-sale {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  padding: 5px 8px 5px 2.5px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  width: 33px;
+  font-size: 11px;
+  font-family: var(--font-hormonia);
+  background-color: rgba(255,0,0,1);
+}
+
+.shop-sum {
+  position: absolute;
+  top: 10px;
+  left: 48px;
+  padding: 5px 8px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  width: 35px;
+  font-size: 11px;
+  font-family: var(--font-hormonia);
+  background-color: rgba(47,181,210,1);
+}
+
+.shop-sum-inner {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+
+.shop-icon-item {
+  position: absolute;
+  top: 320px;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  margin: 0 5px;
+  background-color: #222;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.shoping-cart {
+  left: 30%;
+  transition: top 0.2s ease;
+}
+
+.heart-icon {
+  left: 47.5%;
+  transition: top 0.35s ease;
+
+}
+
+.area-icon {
+  left: 65%;
+  transition: top 0.5s ease;
+}
+
+.shop-icon-item:hover {
+  background-color: #d88f0f;
+}
+
+.img-inner:hover .shoping-cart,
+.img-inner:hover .heart-icon,
+.img-inner:hover .area-icon {
+  position: absolute;
+  top: 350px;
+  z-index: 1;
+}
+
+.shop-img {
+  width: 319px;
+  height: 401px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+
+.shop-img-1 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/24-home_default/hummingbird-printed-t-shirt.jpg");
+}
+
+.shop-img-1:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/25-home_default/hummingbird-printed-t-shirt.jpg");
+}
+
+.shop-img-2 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/27-home_default/brown-bear-printed-sweater.jpg");
+}
+
+.shop-img-2:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/28-home_default/brown-bear-printed-sweater.jpg");
+}
+
+.shop-img-3 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/30-home_default/the-best-is-yet-to-come-framed-poster.jpg");
+}
+
+.shop-img-3:hover{
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/31-home_default/the-best-is-yet-to-come-framed-poster.jpg");
+}
+
+.shop-img-4 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/33-home_default/the-adventure-begins-framed-poster.jpg");
+}
+
+.shop-img-4:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/34-home_default/the-adventure-begins-framed-poster.jpg");
+}
+
+.shop-img-5 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/36-home_default/today-is-a-good-day-framed-poster.jpg");
+}
+
+.shop-img-5:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/37-home_default/today-is-a-good-day-framed-poster.jpg");
+}
+
+.shop-img-6 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/41-home_default/mug-the-best-is-yet-to-come.jpg");
+}
+
+.shop-img-6:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/42-home_default/mug-the-best-is-yet-to-come.jpg");
+}
+
+.shop-img-7 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/43-home_default/mug-the-adventure-begins.jpg");
+}
+
+.shop-img-7:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/44-home_default/mug-the-adventure-begins.jpg");
+}
+
+.shop-img-8 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/46-home_default/mug-today-is-a-good-day.jpg");
+}
+
+.shop-img-8:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/45-home_default/mug-today-is-a-good-day.jpg");
+}
+
+.shop-img-9 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/53-home_default/mountain-fox-cushion.jpg");
+}
+
+.shop-img-9:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/54-home_default/mountain-fox-cushion.jpg");
+}
+
+.shop-img-10 {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/57-home_default/brown-bear-cushion.jpg");
+}
+
+.shop-img-10:hover {
+  background-image: url("https://rubiktheme.com/demo/rb_stark_demo/56-home_default/brown-bear-cushion.jpg");
+}
+
+.shop-des-title {
+  font-family: var(--font-barlow);
+  font-size: 13px;
+  color: #a3a3a3;
+  letter-spacing: 1px;
+}
+.shop-des-title:hover {
+  color: #fcbe32;
+  
+}
+
+.shop-big-des-title {
+  font-family: var(--font-hormonia-small);
+  margin: 0;  
+  font-size: 15px;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.shop-big-des-title:hover {
+  color: #fcbe32;
+}
+
+.shop-des-text {
+  font-family: var(--font-hormonia);
+  font-size: 16px;
+}
+
+.shop-text-under {
+  font-family: var(--font-hormonia-small);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.bxs-star {
+  width: 11px;
+  height: 12px;
+  margin-right: 3px;
+}
+
+.view-box {
+  margin: 50px 0 80px 0;
+}
+
+.view-link {
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  font-family: var(--font-barlow);
+  padding: 20px 100px;
+  border: 1px solid #000;
+}
+
+.view-link:hover {
+  background-color: #d88f0f;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* OUR BLOG */
+
+.our-blog {
+  width: 1400px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.our-head-title {
+  font-family: var(--font-barlow);
+  font-weight: 500;
+  margin: 0 0 8px;
+  font-size: 48px;
+  text-align: center;
+}
+.our-head-text {
+  font-family: var(--font-hormonia-small);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.our-item {
+  width: 30.3333%;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.img-our-scale {
+  height: auto;
+  overflow: hidden;
+  transform: scale(100%) rotate(0deg);
+}
+
+.our-img {
+  transition: transform 0.5s ease;
+}
+
+.our-item:hover .our-img {
+  transform: scale(110%) rotate(2deg);
+}
+
+.our-title {
+  font-family: var(--font-hormonia-normal);
+  font-weight: normal;
+  font-size: 17px;
+  color: #222;
+}
+
+.our-title:hover {
+  color: #dc9c2c;
+}
+
+.our-data-text {
+  font-family: var(--font-hormonia-small);
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+}
+
+.our-inline-text {
+  color: #666;
+  font-family: var(--font-hormonia);
+  font-size: 12px;
+}
+
+.our-inline-text:hover {
+  color: #dc9c2c;
+}
+
+.our-text {
+  font-family: var(--font-hormonia-small);
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.our-read-link {
+  font-family: var(--font-hormonia-normal);
+  font-weight: normal;
+  font-size: 16px;
+  color: #666;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #000;
+}
+
+.our-read-link:hover {
+  color: #dc9c2c;
+  border-color: #dc9c2c;;
+}
+
+.our-link-end {
+  margin: 50px;
+  width: 200px;
+  padding: 15px 40px;
+  background: #fff;
+  font-family: var(--font-hormonia-normal);
+  font-size: 17px;
+  color: #000;
+  border: 1px solid rgba(155, 155, 155, 0.301);
+}
+
+.our-link-end:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid transparent;
+}
+
+/* COMPANY */
+
+.swipe-company {
+  width: 100%;
+  padding: 0 20px;
+  background-color: #f7f7f7;
+}
+
+.company-item {
+  margin: 0 48px;
+}
+
+.company-img {
+  width: 113px;
+  height: 108px;
+}
+
+/* FOOTER */
+
+.footer-section {
+  background-color: #23282e;
+  padding: 100px 0 30px;
+  border-bottom: 1px solid rgba(172, 172, 172, 0.212);
+}
+
+.footer-logo {
+  width: 97px;
+  height: 28px;
+}
+
+.footer-input-sec {
+  margin: 40px 0 20px 0;
+}
+
+.footer-title {
+  position: relative;
+  left: 1px;
+  font-family: var(--font-hormonia-normal);
+  font-size: 15px;
+  padding: 10px 30px;
+  width: 146px;
+  font-weight: 600;
+  background-color: #fff;
+  height: 53.5px;
+  margin: 0;
+  display: flex;
+  color: #353535;
+  align-items: center;
+}
+
+.footer-title::after {
+  content: '';
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.footer-input {
+  width: 400px;
+  height: 55px;
+}
+
+.footer-input::placeholder {
+  font-family: var(--font-hormonia-small);
+  font-weight: 600;
+  font-size: 12px;
+  padding-left: 20px;
+  color: rgb(194, 194, 194);
+}
+
+.footer-btn {
+  width: 170px;
+  height: 55px;
+  font-size: 14px;
+  font-family: var(--font-hormonia-small);
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+}
+
+.footer-btn:hover {
+  background-color: #d88f0f;
+}
+
+.footer-apps-item {
+  margin: 0 10px;
+}
+
+.box-icon-apps {
+  font-size: 22px;
+  color: #23282e;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.footer-faq-link {
+  font-family: var(--font-barlow);
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+
+.footer-faq-link:hover {
+  color: #d88f0f;
+}
+
+.footer-connect {
+  padding: 30px 0;
+  background-color: #23282e;
+}
+
+.footer-con-inner {
+  width: 1300px;
+}
+
+.footer-con-text {
+  font-family: var(--font-hormonia-small);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer-con-img {
+  width: 300px;
+  height: 18px;
+}
