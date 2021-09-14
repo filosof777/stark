@@ -316,13 +316,12 @@ img {
 }
 
 .mian-big-list {
-  display: grid;
-  grid-template-columns: repeat(3, 620px);
-  grid-template-rows: repeat(1, 400px);
+  display: flex;
   justify-content: center;
 }
 
 .main-big-item {
+  width: 33.33%;
   margin: 0;
   margin-top: -15px;
   background-repeat: no-repeat;
@@ -439,10 +438,10 @@ img {
 
 .shop-list {
   display:grid;
-  grid-template-columns: repeat(5, 350px);
+  grid-template-columns: repeat(5, 20%);
   /* grid-template-rows: repeat(2 auto); */
   grid-gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .shop-item {
