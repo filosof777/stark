@@ -95,6 +95,7 @@ img {
 }
 
 .header-sec {
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
   position: relative;
@@ -309,7 +310,7 @@ img {
 /* MAIN */
 
 .main {
-  width: 1920px;
+  width: 100%;
   padding: 0;
   margin: 0 auto;
 }
@@ -317,7 +318,7 @@ img {
 .main-big-item {
   margin: 0;
   margin-top: -15px;
-  width: 33.333333333%;
+  width: 33.33%;
   height: 400px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -379,7 +380,7 @@ img {
 /* MAIN NAV */
 
 .main-center {
-  width: 1750px;
+  width: 95%;
   padding: 30px 15px;
   margin: 0 auto;
 
@@ -432,11 +433,16 @@ img {
 
 .shop-list {
   width: 100%;
+  display:grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(2 auto);
+  grid-gap: 10px;
+  justify-items: center;
 }
 
 .shop-item {
-  width: 319px;
-  margin: 0 10px;
+  /* width: 319px;
+  margin: 0 10px; */
   position: relative;
 }
 
@@ -672,7 +678,7 @@ img {
 /* OUR BLOG */
 
 .our-blog {
-  width: 1400px;
+  width: 100%;
   padding: 0;
   margin: 0 auto;
 }
