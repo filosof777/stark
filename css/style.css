@@ -317,7 +317,7 @@ img {
 
 .mian-big-list {
   display: grid;
-  grid-template-columns: repeat(3, 640px);
+  grid-template-columns: repeat(3, 620px);
   grid-template-rows: repeat(1, 400px);
   justify-content: center;
 }
@@ -703,7 +703,6 @@ img {
 .our-list {
   display: grid;
   grid-template-columns: repeat(3, 447px);
-  grid-template-rows: repeat(1, 321px );
   grid-gap: 10px;
   justify-content: center;
 }
