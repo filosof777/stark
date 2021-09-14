@@ -432,17 +432,14 @@ img {
 /* SHOP */
 
 .shop-list {
-  width: 100%;
   display:grid;
-  grid-template-columns: repeat(5, auto);
-  grid-template-rows: repeat(2 auto);
+  grid-template-columns: repeat(5, 350px);
+  /* grid-template-rows: repeat(2 auto); */
   grid-gap: 10px;
-  justify-items: center;
+  /* justify-items: center; */
 }
 
 .shop-item {
-  /* width: 319px;
-  margin: 0 10px; */
   position: relative;
 }
 
@@ -528,7 +525,7 @@ img {
 }
 
 .shop-img {
-  width: 319px;
+  width: 100%;
   height: 401px;
   display: inline-block;
   background-repeat: no-repeat;
